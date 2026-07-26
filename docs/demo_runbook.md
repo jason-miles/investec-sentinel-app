@@ -1,6 +1,6 @@
 # Investec Sentinel — Demo Runbook
 
-**App:** https://investec-fraud-aml-7474654808133980.aws.databricksapps.com
+**App:** https://investec-sentinel-7474654808133980.aws.databricksapps.com
 **Audience:** Investec Wealth & Banking (SQL-skilled team) + ICIB stakeholders
 **Duration:** ~12–15 min · **One-line pitch:** *AI-augmented AML — investigations from hours to minutes, on one governed Lakehouse.*
 
@@ -8,7 +8,7 @@
 
 ## 0. Pre-flight (before the room)
 
-- [ ] App is RUNNING: `databricks apps get investec-fraud-aml --profile fevm-elexon-app-for-settlement-acc`
+- [ ] App is RUNNING: `databricks apps get investec-sentinel --profile fevm-elexon-app-for-settlement-acc`
 - [ ] Pipeline fresh: `databricks bundle run fraud_aml_pipeline_etl --full-refresh-all -t dev --profile ...` (all 9 families fire)
 - [ ] Warehouse `elexon-anamoly-app` (d0305022e6c3db8e) is running / can auto-start
 - [ ] Logged in to the app; **View As = Sarah Chen** (AML Transaction Monitoring)

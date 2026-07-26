@@ -35,7 +35,7 @@ app.include_router(sar_eval.router)
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "app": "investec-fraud-aml"}
+    return {"status": "ok", "app": "investec-sentinel"}
 
 
 @app.get("/api/config")

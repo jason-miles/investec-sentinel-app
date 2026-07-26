@@ -1,6 +1,6 @@
 # Investec Sentinel — Live Demo Walkthrough (≈ 6.5 min)
 
-**App:** https://investec-fraud-aml-7474654808133980.aws.databricksapps.com
+**App:** https://investec-sentinel-7474654808133980.aws.databricksapps.com
 **Audience:** Investec data/platform + financial-crime. **Goal:** show the full AML
 value chain on one governed Databricks platform. **Total: ~6m30s.**
 

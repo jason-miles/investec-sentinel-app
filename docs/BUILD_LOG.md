@@ -4,7 +4,7 @@
 **Platform:** Databricks Data Intelligence Platform (AWS, `eu-central-1`)
 **Workspace:** `fevm-elexon-app-for-settlement-acc.cloud.databricksapps.com` (id `7474654808133980`)
 **Repo:** https://github.com/jason-miles/fraud-and-aml-detection-app (`main`)
-**Live app:** https://investec-fraud-aml-7474654808133980.aws.databricksapps.com
+**Live app:** https://investec-sentinel-7474654808133980.aws.databricksapps.com
 **Built:** 2026-07-19 · 31 commits · 3 Isaac Review passes (clean)
 
 This document records every build step and its purpose so any engineer or AI agent
@@ -179,7 +179,7 @@ Each bullet lists the artifact so it can be rebuilt. (Roadmap refs → `NEXT_STE
 |----------|-------|
 | Catalog | `elexon_app_for_settlement_acc_catalog` |
 | Schemas | `investec_fraud_aml_{bronze,silver,gold}` |
-| App | `investec-fraud-aml` |
+| App | `investec-sentinel` |
 | App service principal | `982e92ba-63ff-4de6-95ff-2bea54a734bd` |
 | Genie space | `01f183691e8f14f18ae80b78b6ffae8b` ("Fraud & AML Analyst", 8 tables) |
 | Setup warehouse | `dcb1c3dd8d1570d6` (Serverless Starter) |
