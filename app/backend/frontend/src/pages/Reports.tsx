@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { getConfig } from "../api";
-import { Loading } from "../components/ui";
+import { Loading, ErrorState } from "../components/ui";
 
 export function Reports() {
   const [cfg, setCfg] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  useEffect(() => { getConfig().then((c) => { setCfg(c); setLoading(false); }).catch(() => setLoading(false)); }, []);
+  const [err, setErr] = useState(false);
+  const load = () => { setErr(false); getConfig().then((c) => { setErr(false); setCfg(c); setLoading(false); }).catch(() => { setErr(true); setLoading(false); }); };
+  useEffect(() => { load(); }, []);
   if (loading) return <Loading what="reports" />;
+  if (err) return <ErrorState what="reports" onRetry={() => { setLoading(true); load(); }} />;
 
   const embed = cfg?.dashboard_embed_url;
   return (
@@ -15,7 +18,7 @@ export function Reports() {
       <p className="page-sub">Embedded Databricks AI/BI dashboard — executive KPIs, alert trends, and team performance.</p>
       {embed ? (
         <div className="panel" style={{ padding: 0, overflow: "hidden" }}>
-          <iframe title="Investec Sentinel — Executive Overview" src={embed}
+          <iframe title="Nedbank Sentinel — Executive Overview" src={embed}
             style={{ width: "100%", height: "80vh", border: "none" }} />
         </div>
       ) : (
